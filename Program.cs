@@ -6,7 +6,12 @@
         {
             Console.Write("Как се казваш? ");
             string? name = Console.ReadLine();
-            Console.WriteLine($"Добър ден, {name}!");
+            if (name == "")
+            {
+                Console.WriteLine("Моля, въведете име.");
+                return;
+            }
+            Console.WriteLine($"Добър ден, {name?.Trim()}!");
 
         }
     }
