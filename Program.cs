@@ -6,12 +6,12 @@
         {
             Console.Write("Как се казваш? ");
             string? name = Console.ReadLine();
-            if (name == "")
+            if (string.IsNullOrWhiteSpace(name))
             {
                 Console.WriteLine("Моля, въведете име.");
                 return;
             }
-            Console.WriteLine($"Добър ден, {name?.Trim()}!");
+            Console.WriteLine($"Добър ден, {name.Trim()}!");
 
         }
     }
